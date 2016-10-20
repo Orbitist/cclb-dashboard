@@ -21,10 +21,10 @@
 </style>
 <div id='map'></div>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiYnVmZmFsb2J1c2luZXNzZmlyc3QiLCJhIjoiY2l0bmRscXlrMDQyZTJ4bDR3czB4aGplZCJ9.hT3YUWzzRC-s0jGYQU1rXQ';
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2NsYiIsImEiOiJjaXVpN2kyaDIwMHN3MnRydXY2ZGpxN2tiIn0.2DjZvLsMgvMhV1-OLA3gCA';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'http://labs.orbitist.com/orbitist-styles/styles/orbitistLight.json',
     center: [-79.2912, 42.2975],
     zoom: 9
 });
@@ -32,8 +32,8 @@ var map = new mapboxgl.Map({
 map.on('load', function () {
     // Add a GeoJSON source containing the state polygons.
     map.addSource('housing', {
-        'type': 'geojson',
-        'data': 'data/housing.geojson'
+        'type': 'vector',
+        'data': 'mapbox://cclb.ciui7qu9w001l2zpcxlufjwrg-7j1q6'
     });
 
     // Add a layer showing the state polygons.
