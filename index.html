@@ -31,33 +31,34 @@ var map = new mapboxgl.Map({
 
 map.on('load', function () {
     // Add a GeoJSON source containing the state polygons.
-    map.addSource('housing', {
+    map.addSource('housing-tiles', {
         'type': 'vector',
-        'data': 'mapbox://cclb.ciui7qu9w001l2zpcxlufjwrg-7j1q6'
+        'url': 'mapbox://cclb.ciui7qu9w001l2zpcxlufjwrg-7j1q6'
     });
 
-    // Add a layer showing the state polygons.
     map.addLayer({
-        'id': 'housing-layer',
-        'type': 'fill',
-        'source': 'housing',
-        'source-layer': 'housing',
-        'paint': {
-            'fill-color': {
-                property: 'b25064e1',
-                stops: [
-                    [353, '#EED322'],
-                    [471, '#E6B71E'],
-                    [589, '#DA9C20'],
-                    [707, '#CA8323'],
-                    [825, '#B86B25'],
-                    [943, '#A25626'],
-                    [1063, '#8B4225']
-                ]
-            },
-            'fill-opacity': 0.75
-          }
+    'id': 'housing-layer',
+    'source': 'housing-tiles',
+    'source-layer': 'housing',
+    'type': 'fill',
+    'paint': {
+        'fill-color': {
+            property: 'B25064e1',
+            stops: [
+                [0, '#F2F12D'],
+                [353, '#EED322'],
+                [471, '#E6B71E'],
+                [589, '#DA9C20'],
+                [707, '#CA8323'],
+                [825, '#B86B25'],
+                [943, '#A25626'],
+                [1063, '#8B4225']
+            ]
+        },
+        'fill-opacity': 0.75
+      }
     });
+
 });
 
 </script>
