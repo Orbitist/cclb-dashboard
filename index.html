@@ -69,7 +69,8 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'http://labs.orbitist.com/orbitist-styles/styles/orbitistDawn.json',
     center: [-79.3837, 42.2918],
-    zoom: 9
+    zoom: 9,
+    minZoom: 8
 });
 
 map.on('load', function () {
