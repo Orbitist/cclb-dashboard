@@ -1,4 +1,4 @@
-permalink: _site/:title
+permalink: :title
 
 highlighter: rouge
 markdown: kramdown
