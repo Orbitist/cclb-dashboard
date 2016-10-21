@@ -8,7 +8,7 @@ tagline: Data Dashboard
 
 production_url : labs.orbitist.com/cclb-dashbboard
 
-baseurl : http://labs.orbitist.com/cclb-dashbboard
+baseurl : /cclb-dashbboard
 
 timezone : America/New_York
 
