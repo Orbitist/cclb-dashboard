@@ -1,4 +1,4 @@
-permalink: :title
+permalink: /cclb-dashboard/:title
 
 highlighter: rouge
 markdown: kramdown
