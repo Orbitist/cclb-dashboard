@@ -1,6 +1,7 @@
 ---
 layout: map
 title: 'Income'
+orbitistMapId: 4976
 dataField: "B19013e1"
 dataStops: "[0, '#ffffcc'],[20000, '#ffeda0'],[30000, '#fed976'],[40000, '#feb24c'],[50000, '#fd8d3c'],[60000, '#fc4e2a'],[70000, '#e31a1c'],[999999999, '#333333']"
 ---
