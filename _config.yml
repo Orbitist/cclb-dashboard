@@ -6,9 +6,9 @@ markdown: kramdown
 title : Chautauqua Land Bank
 tagline: Data Dashboard
 
-production_url : labs.orbitist.com/cclb-dashbboard
+production_url : labs.orbitist.com/cclb-dashboard
 
-baseurl : /cclb-dashbboard
+baseurl : /cclb-dashboard
 
 timezone : America/New_York
 
