@@ -19,19 +19,11 @@ layout: page
       <!-- <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
     </div>
 
-    <div class="row marketing">
-      <div class="col-lg-6">
-        <h4>Median Household Income</h4>
-        <p><a class="btn btn-lg btn-success" href="maps/median_household_income.html" role="button">View Map</a></p>
-
-      </div>
-
-      <div class="col-lg-6">
-        <h4>Median Gross Rent</h4>
-        <p><a class="btn btn-lg btn-success" href="maps/median_gross_rent.html" role="button">View Map</a></p>
-      </div>
+    {% for post in site.posts %}
+    <div class="col-md-6">
+      <h4>{{ post.title }}</h4>
+      <p><a class="btn btn-lg btn-success" href="{{ post.url }}" role="button">View Map</a></p>
     </div>
+    {% endfor %}  <!-- page -->
 
   </div> <!-- /container -->
-
-  Test

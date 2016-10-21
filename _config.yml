@@ -11,3 +11,5 @@ production_url : labs.orbitist.com/cclb-dashbboard
 baseurl : http://labs.orbitist.com/cclb-dashbboard
 
 timezone : America/New_York
+
+category: [map]
