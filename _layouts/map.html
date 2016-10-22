@@ -31,6 +31,7 @@ var orbitistPointsGeojsonCleaned = JSON.parse(jsonCleaner);
 
 var dataField = "{{ page.dataField }}";
 
+mapboxgl.accessToken = 'pk.eyJ1Ijoib3JiaXRpc3QiLCJhIjoiYnpUTnJBdyJ9.uxgaJ0R9ZNsCcEnPNfo2ag';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://tiles.orbitist.com/designs/orbitistDawn.json',
