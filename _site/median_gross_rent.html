@@ -14,7 +14,7 @@
 		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js'></script>
 		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
 
-		<link href='/cclb-dashboard/style.css' rel='stylesheet' />
+		<link href='/style.css' rel='stylesheet' />
 </head>
 
 	<body>
@@ -59,10 +59,10 @@ var orbitistPointsGeojsonCleaned = JSON.parse(jsonCleaner);
 
 var dataField = "B25064e1";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2NsYiIsImEiOiJjaXVpN2kyaDIwMHN3MnRydXY2ZGpxN2tiIn0.2DjZvLsMgvMhV1-OLA3gCA';
+mapboxgl.accessToken = 'pk.eyJ1Ijoib3JiaXRpc3QiLCJhIjoiYnpUTnJBdyJ9.uxgaJ0R9ZNsCcEnPNfo2ag';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'http://labs.orbitist.com/orbitist-styles/styles/orbitistDawn.json',
+    style: 'https://tiles.orbitist.com/designs/orbitistDawn.json',
     center: [-79.3837, 42.2918],
     zoom: 9,
     minZoom: 9
@@ -73,11 +73,6 @@ map.on('load', function () {
     map.addSource('chautauqua-tiger-tiles', {
         'type': 'vector',
         'url': 'mapbox://cclb.2wkaivft'
-    });
-
-    map.addSource("orbitistPoints", {
-      type: "geojson",
-      data: orbitistPointsGeojsonCleaned
     });
 
     map.addLayer({
@@ -97,6 +92,11 @@ map.on('load', function () {
       }
     }, 'water');
 
+    map.addSource('orbitistPoints', {
+      'type': 'geojson',
+      'data': orbitistPointsGeojsonCleaned
+    });
+
     map.addLayer({
       "id": "points",
       "type": "symbol",
@@ -108,7 +108,7 @@ map.on('load', function () {
         "icon-offset": [0, -5],
         "icon-ignore-placement": true,
         "text-field": "{point_title}",
-        "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+        "text-font": ["Open Sans Semibold"],
         "text-size": 12,
         "text-offset": [0, 0.5],
         "text-anchor": "top",
@@ -121,6 +121,7 @@ map.on('load', function () {
       }
     });
 });
+
 
 // Add custom markers to map
 for (var i = 0; i < orbitistPointsGeojsonCleaned.features.length; i++) {
