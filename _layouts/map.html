@@ -14,7 +14,7 @@ var orbitistPointsGeojson = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'https://app.orbitist.com//api/v1/points/' + {{ page.orbitistMapId }} + '.json',
+        'url': 'https://orbitist.space/maps/api/v1/points/' + {{ page.orbitistMapId }} + '.json',
         'dataType': "json",
         'success': function (data) {
             orbitistPointsGeojson = data;
@@ -34,7 +34,7 @@ var dataField = "{{ page.dataField }}";
 mapboxgl.accessToken = 'pk.eyJ1Ijoib3JiaXRpc3QiLCJhIjoiYnpUTnJBdyJ9.uxgaJ0R9ZNsCcEnPNfo2ag';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'https://tiles.orbitist.com/designs/orbitistDawn.json',
+    style: 'mapbox://styles/orbitist/cir21uwoi000tbunsdeqr33iv',
     center: [-79.3837, 42.2918],
     zoom: 9,
     minZoom: 9
