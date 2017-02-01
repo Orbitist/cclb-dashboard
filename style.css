@@ -3,8 +3,8 @@ body { margin:0; padding:0; }
 
 .main-menu {
  position: fixed;
- top: 5px;
- left: 5px;
+ top: 10px;
+ left: 10px;
  z-index: 1;
 }
 
