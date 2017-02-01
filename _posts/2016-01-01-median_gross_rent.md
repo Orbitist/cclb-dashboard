@@ -1,6 +1,6 @@
 ---
 layout: map
-title: 'Rent'
+title: 'Median Gross Rent'
 orbitistMapId: null
 dataField: "B25064e1"
 dataStops: "[0, '#ffffcc'],[300, '#ffeda0'],[400, '#fed976'],[500, '#feb24c'],[600, '#fd8d3c'],[700, '#fc4e2a'],[800, '#e31a1c'],[900, '#b10026'],[1000, '#800026'],[99999, '#333333']"
